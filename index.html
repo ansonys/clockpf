@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clock</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div class="clock">
+        <div class="hour">
+            <div class="hr" id="hr"></div>
+        </div>
+        <div class="min">
+            <div class="mn" id="mn"></div>
+        </div>
+        <div class="sec">
+            <div class="sc" id="sc"></div>
+        </div>
+    </div>
+    <script>
+        const deg = 6;
+        const hr = document.getElementById("hr");
+        const mn = document.getElementById("mn");
+        const sc = document.getElementById("sc");
+        
+        // アナログ時計作るときこれ使う↓(const deg = 6)
+        setInterval(() => {
+        let dt = new Date();
+        let h = dt.getHours() * 30;
+        let m = dt.getMinutes() * deg ;
+        let s = dt.getSeconds() * deg ;
+        
+        
+        hr.style.transform = `rotateZ(${(h)+(m/12)}deg)`;
+        mn.style.transform = `rotateZ(${m}deg)`;
+        sc.style.transform = `rotateZ(${s}deg)`;
+        })
+        // ここまで
+    </script>
+</div>
+</body>
+</html>
