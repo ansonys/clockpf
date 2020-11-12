@@ -10,7 +10,7 @@ body {
     /* 縦幅を真ん中にする */
     align-items: center;
     min-height: 100vh;
-    background-image: url(img/backimg.webp);
+    background-image: url(backimg.webp);
     /* background: #091921; */
     background-position: center;
     background-size: cover;
@@ -22,7 +22,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(img/clock.png);
+    background-image: url(clock.png);
     background-size: cover;
     border: 5px solid #091921;
     /* 周りの枠線を円にする */
